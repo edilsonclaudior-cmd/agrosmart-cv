@@ -1,35 +1,17 @@
-# AgroSmart CV — Guia para Executar no Seu Computador
+# AgroSmart CV
 
-Este projeto está 100% independente e livre de marcas de água externas quando executado localmente no seu computador.
+**NASA Earth Observation Decision-Support Platform for Climate-Resilient Agriculture in Cabo Verde**
 
-## Pré-requisitos
-1. Instale o **Node.js** (versão 20 ou superior): https://nodejs.org/
+AgroSmart CV is a bilingual (Portuguese/English) web platform designed to support smallholder farmers and agronomists across all **9 inhabited islands of Cabo Verde**, including **7 agroecological zones in Santiago Island**.
 
-## Passo a Passo para Rodar no Computador
-1. Descompacte a pasta do projeto (ZIP) no seu computador.
-2. Abra o terminal (**Prompt de Comando / PowerShell** no Windows ou **Terminal** no Mac/Linux) dentro da pasta do projeto.
-3. Instale as dependências:
-   ```bash
-   npm install
-   ```
-4. *(Opcional — para usar o Agrónomo IA localmente)* Crie um ficheiro chamado `.env` na raiz do projeto (copiando o `.env.example`) e adicione a sua chave Gemini:
-   ```env
-   GEMINI_API_KEY="SUA_CHAVE_AQUI"
-   ```
-5. Inicie o site:
-   ```bash
-   npm run dev
-   ```
-6. Abra o navegador em:
-   ```
-   http://localhost:3000
-   ```
+## NASA Data & Missions Integrated
+- **NASA POWER Agroclimatology API** — Air & surface temperature, precipitation, solar radiation, relative humidity, and wind speed
+- **NASA SMAP** — Topsoil and root-zone soil moisture
+- **NASA GPM & IMERG** — Precipitation monitoring and extreme rain alerts
+- **NASA Landsat (30m) & MODIS/VIIRS (250m)** — NDVI & NDWI vegetation/water vigor indices
+- **NASA ECOSTRESS** — Land surface temperature (LST) and reference evapotranspiration (ET₀)
+- **NASA SRTM (30m)** — Terrain elevation and hillside slope erosion risk
 
-## Build para Produção (Publicar em Servidor Próprio)
-Se quiser gerar os ficheiros finais e rodar em modo produção:
-```bash
-npm run build
-```
-E depois iniciar o servidor em modo produção:
-- **Mac / Linux**: `NODE_ENV=production npx tsx server.ts`
-- **Windows (PowerShell)**: `$env:NODE_ENV="production"; npx tsx server.ts`
+## Tech Stack
+- **Frontend:** TypeScript, React 19, Vite 8, Tailwind CSS v4, Lucide Icons, Motion, jsPDF
+- **Backend:** Node.js, Express, Server-Sent Events (SSE), Google GenAI SDK (server-side AI Agronomist)
