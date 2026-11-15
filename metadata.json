@@ -1,0 +1,8 @@
+{
+  "name": "AgroSmart",
+  "description": "Plataforma de apoio à decisão agrícola com observações da Terra da NASA, análise de solo local, simulação de rotação de culturas, modelagem preditiva e alertas automatizados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
